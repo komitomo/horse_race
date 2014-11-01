@@ -10,7 +10,7 @@
   .control-group
     = f.label 'グレード', :class => 'control-label'
     .controls
-      = f.text_field :race_grade, :class => 'text_field'
+      = f.select :race_grade, [['G1',1],['G2',2],['G3',3]], :class => 'select_field'
   .control-group
     = f.label 'レース名', :class => 'control-label'
     .controls

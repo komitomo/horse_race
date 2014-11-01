@@ -1,0 +1,6 @@
+race:
+  grade:
+   grade1: 'GⅠ',
+   grade2: 'GⅡ',
+   grade3: 'GⅢ',
+   gradeop: 'OP'
