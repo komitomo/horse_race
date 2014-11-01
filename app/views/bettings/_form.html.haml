@@ -1,0 +1,64 @@
+= form_for @betting, :html => { :class => 'form-horizontal' } do |f|
+  .control-group
+    = f.label :date, :class => 'control-label'
+    .controls
+      = f.text_field :date, :class => 'text_field'
+  .control-group
+    = f.label :race_course, :class => 'control-label'
+    .controls
+      = f.text_field :race_course, :class => 'text_field'
+  .control-group
+    = f.label :race_grade, :class => 'control-label'
+    .controls
+      = f.text_field :race_grade, :class => 'text_field'
+  .control-group
+    = f.label :race_name, :class => 'control-label'
+    .controls
+      = f.text_field :race_name, :class => 'text_field'
+  .control-group
+    = f.label :type, :class => 'control-label'
+    .controls
+      = f.text_field :type, :class => 'text_field'
+  .control-group
+    = f.label :way, :class => 'control-label'
+    .controls
+      = f.text_field :way, :class => 'text_field'
+  .control-group
+    = f.label :option, :class => 'control-label'
+    .controls
+      = f.text_field :option, :class => 'text_field'
+  .control-group
+    = f.label :favorite, :class => 'control-label'
+    .controls
+      = f.text_field :favorite, :class => 'text_field'
+  .control-group
+    = f.label :horse_num, :class => 'control-label'
+    .controls
+      = f.text_field :horse_num, :class => 'text_field'
+  .control-group
+    = f.label :points, :class => 'control-label'
+    .controls
+      = f.text_field :points, :class => 'text_field'
+  .control-group
+    = f.label :unit, :class => 'control-label'
+    .controls
+      = f.text_field :unit, :class => 'text_field'
+  .control-group
+    = f.label :total, :class => 'control-label'
+    .controls
+      = f.text_field :total, :class => 'text_field'
+  .control-group
+    = f.label :income, :class => 'control-label'
+    .controls
+      = f.text_field :income, :class => 'text_field'
+  .control-group
+    = f.label :loss, :class => 'control-label'
+    .controls
+      = f.text_field :loss, :class => 'text_field'
+  .control-group
+    = f.label :account, :class => 'control-label'
+    .controls
+      = f.text_field :account, :class => 'text_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), bettings_path, :class => 'btn'
