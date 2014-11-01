@@ -11,6 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20141101095525) do
+
+  create_table "bettings", force: true do |t|
+    t.date     "date"
+    t.string   "race_course"
+    t.string   "race_grade"
+    t.string   "race_name"
+    t.string   "type"
+    t.string   "way"
+    t.string   "option"
+    t.string   "favorite"
+    t.string   "horse_num"
+    t.integer  "points"
+    t.integer  "unit"
+    t.integer  "total"
+    t.integer  "income"
+    t.integer  "loss"
+    t.integer  "account"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
