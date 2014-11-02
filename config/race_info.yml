@@ -1,6 +1,38 @@
 race:
   grade:
-   grade1: 'GⅠ',
-   grade2: 'GⅡ',
-   grade3: 'GⅢ',
-   gradeop: 'OP'
+    grade1: 'GⅠ'
+    grade2: 'GⅡ'
+    grade3: 'GⅢ'
+    gradeop: 'OP'
+  course:
+    sapporo: '札幌'
+    hakodate: '函館'
+    fukushima: '福島'
+    niigata: '新潟'
+    nakayama: '中山'
+    tokyo: '東京'
+    chukyo: '中京'
+    kyoto: '京都'
+    hanshin: '阪神'
+    kokura: '小倉'
+  type:
+    win: '単勝'
+    place: '複勝'
+    winplace: '単＋複'
+    bracket quinella: '枠連'
+    quinella place: 'ワイド'
+    quinella: '馬連'
+    exacta: '馬単'
+    trio: '3連複'
+    trifecta: '3連単'
+  way:
+    usual: '通常'
+    box: 'ボックス'
+    formation: 'フォーメーション'
+    fukuwheel: '連複ながし'
+    tanwheel: '連単ながし'
+  option:
+    one: '1頭'
+    two: '2頭'
+    multi: 'マルチ'
+    full: '全頭'
