@@ -15,6 +15,7 @@ race:
     kyoto: '京都'
     hanshin: '阪神'
     kokura: '小倉'
+betting:
   type:
     win: '単勝'
     place: '複勝'

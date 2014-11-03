@@ -32,6 +32,8 @@ gem 'therubyracer'
 gem 'twitter-bootstrap-rails', '~> 2.2.8'
 gem 'font-awesome-rails'
 gem 'bootstrap-sass', '2.3.2.0'
+gem 'momentjs-rails', '>= 2.8.1'
+gem 'bootstrap3-datetimepicker-rails', '~> 3.1.3'
 
 #haml
 gem 'haml-rails'

@@ -19,17 +19,17 @@
   %br
   = @betting.race_name
 %p
-  %strong= model_class.human_attribute_name(:type) + ':'
+  %strong= model_class.human_attribute_name(:betting_type) + ':'
   %br
-  = @betting.type
+  = @betting.betting_type
 %p
-  %strong= model_class.human_attribute_name(:way) + ':'
+  %strong= model_class.human_attribute_name(:betting_way) + ':'
   %br
-  = @betting.way
+  = @betting.betting_way
 %p
-  %strong= model_class.human_attribute_name(:option) + ':'
+  %strong= model_class.human_attribute_name(:betting_option) + ':'
   %br
-  = @betting.option
+  = @betting.betting_option
 %p
   %strong= model_class.human_attribute_name(:favorite) + ':'
   %br
@@ -37,7 +37,7 @@
 %p
   %strong= model_class.human_attribute_name(:horse_num) + ':'
   %br
-  = @betting.horse_num
+  = @betting.horse_nums
 %p
   %strong= model_class.human_attribute_name(:points) + ':'
   %br

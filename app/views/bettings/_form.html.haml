@@ -1,8 +1,10 @@
 = form_for @betting, :html => { :class => 'form-horizontal' } do |f|
   .control-group
     = f.label '日付', :class => 'control-label'
-    .controls
-      = f.text_field :date, :class => 'text_field'
+    .controls{id: :datetimepicker2}
+      = f.text_filed :date, :class => 'form_control'
+		    .span{:class => 'input-group-addon'}
+		      .span{:class => 'glyphicon glyphicon-calendar'}
   .control-group
     = f.label '場名', :class => 'control-label'
     .controls
@@ -18,15 +20,15 @@
   .control-group
     = f.label '式別', :class => 'control-label'
     .controls
-      = f.select :type, options_for_select(RACE_INFO["race"]["type"].invert),:class => 'select_field'
+      = f.select :betting_type, options_for_select(RACE_INFO["betting"]["type"].invert),:class => 'select_field'
   .control-group
     = f.label '方式', :class => 'control-label'
     .controls
-      = f.select :way, options_for_select(RACE_INFO["race"]["way"].invert),:class => 'select_field'
+      = f.select :betting_way, options_for_select(RACE_INFO["betting"]["way"].invert),:class => 'select_field'
   .control-group
     = f.label 'オプション', :class => 'control-label'
     .controls
-      = f.select :option, options_for_select(RACE_INFO["race"]["option"].invert),:class => 'select_field'
+      = f.select :betting_option, options_for_select(RACE_INFO["betting"]["option"].invert),:class => 'select_field'
   .control-group
     = f.label '軸馬', :class => 'control-label'
     .controls
@@ -34,7 +36,7 @@
   .control-group
     = f.label '馬番', :class => 'control-label'
     .controls
-      = f.text_field :horse_num, :class => 'text_field'
+      = f.text_field :horse_nums, :class => 'text_field'
   .control-group
     = f.label '点数', :class => 'control-label'
     .controls

@@ -27,14 +27,14 @@
       %tr
         %td= link_to betting.id, betting_path(betting)
         %td= betting.date
-        %td= betting.race_course
-        %td= betting.race_grade
+        %td= RACE_INFO["race"]["course"]["#{betting.race_course}"]
+        %td= RACE_INFO["race"]["grade"]["#{betting.race_grade}"]
         %td= betting.race_name
-        %td= betting.type
-        %td= betting.way
-        %td= betting.option
+        %td= RACE_INFO["betting"]["type"]["#{betting.betting_type}"]
+        %td= RACE_INFO["betting"]["way"]["#{betting.betting_way}"]
+        %td= RACE_INFO["betting"]["option"]["#{betting.betting_option}"]
         %td= betting.favorite
-        %td= betting.horse_num
+        %td= betting.horse_nums
         %td= betting.points
         %td= betting.unit
         %td= betting.total

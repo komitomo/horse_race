@@ -11,18 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141101095525) do
+ActiveRecord::Schema.define(version: 20141102065332) do
 
   create_table "bettings", force: true do |t|
     t.date     "date"
     t.string   "race_course"
     t.string   "race_grade"
     t.string   "race_name"
-    t.string   "type"
-    t.string   "way"
-    t.string   "option"
+    t.string   "betting_type"
+    t.string   "betting_way"
+    t.string   "betting_option"
     t.string   "favorite"
-    t.string   "horse_num"
+    t.string   "horse_nums"
     t.integer  "points"
     t.integer  "unit"
     t.integer  "total"

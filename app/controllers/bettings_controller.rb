@@ -69,6 +69,6 @@ class BettingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def betting_params
-      params[:betting]
+      params.require(:betting).permit(:date,:race_course,:race_grade,:race_name,:betting_type,:betting_way,:betting_option,:favorite,:horse_nums,:points,:unit,:total,:income,:loss,:account)
     end
 end
