@@ -1,8 +1,8 @@
 = form_for @betting, :html => { :class => 'form-horizontal' } do |f|
   .control-group
     = f.label '日付', :class => 'control-label'
-    .controls{id: :datetimepicker2}
-      = f.text_filed :date, :class => 'form_control'
+    .controls{id: :datetimepicker}
+      = f.text_filed :date, :class => 'form_control', data-date-format => "YYYY/MM/DD"
 		    .span{:class => 'input-group-addon'}
 		      .span{:class => 'glyphicon glyphicon-calendar'}
   .control-group
