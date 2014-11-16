@@ -1,66 +1,63 @@
 = form_for @betting, :html => { :class => 'form-horizontal' } do |f|
-  .control-group
-    = f.label '日付', :class => 'control-label'
-    .controls{id: :datetimepicker}
-      = f.text_filed :date, :class => 'form_control', data-date-format => "YYYY/MM/DD"
-		    .span{:class => 'input-group-addon'}
-		      .span{:class => 'glyphicon glyphicon-calendar'}
-  .control-group
-    = f.label '場名', :class => 'control-label'
+  .form-group
+    = f.label :date, :class => 'control-label'
     .controls
-      = f.select :race_course, options_for_select(RACE_INFO["race"]["course"].invert),:class => 'select_field'
-  .control-group
-    = f.label 'グレード', :class => 'control-label'
+      = f.text_field :date, :class => 'form-control'
+  .form-group
+    = f.label :race_course, :class => 'control-label'
     .controls
-      = f.select :race_grade, options_for_select(RACE_INFO["race"]["grade"].invert), :class => 'select_field'
-  .control-group
-    = f.label 'レース名', :class => 'control-label'
+      = f.text_field :race_course, :class => 'form-control'
+  .form-group
+    = f.label :race_grade, :class => 'control-label'
     .controls
-      = f.text_field :race_name, :class => 'text_field'
-  .control-group
-    = f.label '式別', :class => 'control-label'
+      = f.text_field :race_grade, :class => 'form-control'
+  .form-group
+    = f.label :race_name, :class => 'control-label'
     .controls
-      = f.select :betting_type, options_for_select(RACE_INFO["betting"]["type"].invert),:class => 'select_field'
-  .control-group
-    = f.label '方式', :class => 'control-label'
+      = f.text_field :race_name, :class => 'form-control'
+  .form-group
+    = f.label :betting_type, :class => 'control-label'
     .controls
-      = f.select :betting_way, options_for_select(RACE_INFO["betting"]["way"].invert),:class => 'select_field'
-  .control-group
-    = f.label 'オプション', :class => 'control-label'
+      = f.text_field :betting_type, :class => 'form-control'
+  .form-group
+    = f.label :betting_way, :class => 'control-label'
     .controls
-      = f.select :betting_option, options_for_select(RACE_INFO["betting"]["option"].invert),:class => 'select_field'
-  .control-group
-    = f.label '軸馬', :class => 'control-label'
+      = f.text_field :betting_way, :class => 'form-control'
+  .form-group
+    = f.label :betting_option, :class => 'control-label'
     .controls
-      = f.text_field :favorite, :class => 'text_field'
-  .control-group
-    = f.label '馬番', :class => 'control-label'
+      = f.text_field :betting_option, :class => 'form-control'
+  .form-group
+    = f.label :favorite, :class => 'control-label'
     .controls
-      = f.text_field :horse_nums, :class => 'text_field'
-  .control-group
-    = f.label '点数', :class => 'control-label'
+      = f.text_field :favorite, :class => 'form-control'
+  .form-group
+    = f.label :horse_nums, :class => 'control-label'
     .controls
-      = f.text_field :points, :class => 'text_field'
-  .control-group
-    = f.label '単位', :class => 'control-label'
+      = f.text_field :horse_nums, :class => 'form-control'
+  .form-group
+    = f.label :points, :class => 'control-label'
     .controls
-      = f.text_field :unit, :class => 'text_field'
-  .control-group
-    = f.label '計', :class => 'control-label'
+      = f.text_field :points, :class => 'form-control'
+  .form-group
+    = f.label :unit, :class => 'control-label'
     .controls
-      = f.text_field :total, :class => 'text_field'
-  .control-group
-    = f.label '+', :class => 'control-label'
+      = f.text_field :unit, :class => 'form-control'
+  .form-group
+    = f.label :total, :class => 'control-label'
     .controls
-      = f.text_field :income, :class => 'text_field'
-  .control-group
-    = f.label '-', :class => 'control-label'
+      = f.text_field :total, :class => 'form-control'
+  .form-group
+    = f.label :income, :class => 'control-label'
     .controls
-      = f.text_field :loss, :class => 'text_field'
-  .control-group
-    = f.label '収支', :class => 'control-label'
+      = f.text_field :income, :class => 'form-control'
+  .form-group
+    = f.label :loss, :class => 'control-label'
     .controls
-      = f.text_field :account, :class => 'text_field'
-  .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
-    = link_to t('.cancel', :default => t("helpers.links.cancel")), bettings_path, :class => 'btn'
+      = f.text_field :loss, :class => 'form-control'
+  .form-group
+    = f.label :account, :class => 'control-label'
+    .controls
+      = f.text_field :account, :class => 'form-control'
+  = f.submit nil, :class => 'btn btn-primary'
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), bettings_path, :class => 'btn btn-default'

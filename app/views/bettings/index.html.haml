@@ -5,21 +5,21 @@
   %thead
     %tr
       %th= model_class.human_attribute_name(:id)
-      %th= model_class.human_attribute_name('日付')
-      %th= model_class.human_attribute_name('場名')
-      %th= model_class.human_attribute_name('グレード')
-      %th= model_class.human_attribute_name('レース名')
-      %th= model_class.human_attribute_name('式別')
-      %th= model_class.human_attribute_name('方式')
-      %th= model_class.human_attribute_name('オプション')
-      %th= model_class.human_attribute_name('軸馬')
-      %th= model_class.human_attribute_name('馬番')
-      %th= model_class.human_attribute_name('点数')
-      %th= model_class.human_attribute_name('単位')
-      %th= model_class.human_attribute_name('合計')
-      %th= model_class.human_attribute_name('+')
-      %th= model_class.human_attribute_name('-')
-      %th= model_class.human_attribute_name('収支')
+      %th= model_class.human_attribute_name(:date)
+      %th= model_class.human_attribute_name(:race_course)
+      %th= model_class.human_attribute_name(:race_grade)
+      %th= model_class.human_attribute_name(:race_name)
+      %th= model_class.human_attribute_name(:betting_type)
+      %th= model_class.human_attribute_name(:betting_way)
+      %th= model_class.human_attribute_name(:betting_option)
+      %th= model_class.human_attribute_name(:favorite)
+      %th= model_class.human_attribute_name(:horse_nums)
+      %th= model_class.human_attribute_name(:points)
+      %th= model_class.human_attribute_name(:unit)
+      %th= model_class.human_attribute_name(:total)
+      %th= model_class.human_attribute_name(:income)
+      %th= model_class.human_attribute_name(:loss)
+      %th= model_class.human_attribute_name(:account)
       %th= model_class.human_attribute_name(:created_at)
       %th=t '.actions', :default => t("helpers.actions")
   %tbody
@@ -27,12 +27,12 @@
       %tr
         %td= link_to betting.id, betting_path(betting)
         %td= betting.date
-        %td= RACE_INFO["race"]["course"]["#{betting.race_course}"]
-        %td= RACE_INFO["race"]["grade"]["#{betting.race_grade}"]
+        %td= betting.race_course
+        %td= betting.race_grade
         %td= betting.race_name
-        %td= RACE_INFO["betting"]["type"]["#{betting.betting_type}"]
-        %td= RACE_INFO["betting"]["way"]["#{betting.betting_way}"]
-        %td= RACE_INFO["betting"]["option"]["#{betting.betting_option}"]
+        %td= betting.betting_type
+        %td= betting.betting_way
+        %td= betting.betting_option
         %td= betting.favorite
         %td= betting.horse_nums
         %td= betting.points
@@ -43,7 +43,7 @@
         %td= betting.account
         %td=l betting.created_at
         %td
-          = link_to t('.edit', :default => t("helpers.links.edit")), edit_betting_path(betting), :class => 'btn btn-mini'
-          = link_to t('.destroy', :default => t("helpers.links.destroy")), betting_path(betting), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-mini btn-danger'
+          = link_to t('.edit', :default => t("helpers.links.edit")), edit_betting_path(betting), :class => 'btn btn-default btn-xs'
+          = link_to t('.destroy', :default => t("helpers.links.destroy")), betting_path(betting), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs btn-danger'
 
 = link_to t('.new', :default => t("helpers.links.new")), new_betting_path, :class => 'btn btn-primary'
