@@ -32,8 +32,8 @@ gem 'therubyracer'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git', :branch => "bootstrap3"
 gem 'font-awesome-rails'
 gem 'bootstrap-sass', '2.3.2.0'
-gem 'momentjs-rails', '>= 2.8.1'
-gem 'bootstrap3-datetimepicker-rails', '~> 3.1.3'
+#gem 'momentjs-rails', '>= 2.8.1'
+#gem 'bootstrap3-datetimepicker-rails', '~> 3.1.3'
 
 #haml
 gem 'haml-rails'
@@ -50,3 +50,4 @@ gem 'erb2haml'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'execjs'
